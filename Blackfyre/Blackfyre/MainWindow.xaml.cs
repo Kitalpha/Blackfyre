@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using log4net;
+using log4net.Config;
 
 namespace Blackfyre
 {
@@ -20,8 +22,12 @@ namespace Blackfyre
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static readonly ILog _logger = LogManager.GetLogger(typeof(MainWindow));
+
         public MainWindow()
         {
+            log4net.Config.XmlConfigurator.Configure();
+            _logger.Info("Writing to a log file example. This should be in the root project under 'logs' folder.");
             InitializeComponent();
         }
     }
