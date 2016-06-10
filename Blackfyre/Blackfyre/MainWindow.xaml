@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Blackfyre"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="637.38" Width="1145.607">
     <Grid>
-        
+        <Rectangle x:Name="TopBar" Fill="#FF444BE4" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Top" Width="1138" StrokeThickness="0"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" Text="Blackfyre" VerticalAlignment="Top" Width="187" FontSize="24" FontWeight="Bold" Foreground="White" FontFamily="Calibri" Margin="4,5,0,0"/>
+
     </Grid>
 </Window>
