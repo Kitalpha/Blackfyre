@@ -1,0 +1,14 @@
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\bin\Debug\Blackfyre.exe.config
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\bin\Debug\Blackfyre.exe
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\bin\Debug\Blackfyre.pdb
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\Blackfyre.csprojResolveAssemblyReference.cache
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\MainWindow.g.cs
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\App.g.cs
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\Blackfyre_MarkupCompile.cache
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\Blackfyre_MarkupCompile.lref
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\MainWindow.baml
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\Blackfyre.g.resources
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\Blackfyre.Properties.Resources.resources
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\Blackfyre.csproj.GenerateResource.Cache
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\Blackfyre.exe
+C:\Users\christopher\Documents\Github\Blackfyre\Blackfyre\Blackfyre\obj\Debug\Blackfyre.pdb
