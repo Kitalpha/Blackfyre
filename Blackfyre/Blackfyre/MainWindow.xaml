@@ -9,6 +9,19 @@
     <Grid>
         <Rectangle x:Name="TopBar" Fill="#FF444BE4" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Top" Width="1138" StrokeThickness="0"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" Text="Blackfyre" VerticalAlignment="Top" Width="187" FontSize="24" FontWeight="Bold" Foreground="White" FontFamily="Calibri" Margin="4,5,0,0"/>
-
+        <ListView Margin="28,106,865,83" Name="lvPlayers">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Number" Width="70" DisplayMemberBinding="{Binding Number}" />
+                    <GridViewColumn Header="Name" Width="160">
+                        <GridViewColumn.CellTemplate >
+                            <DataTemplate>
+                                <TextBox x:Name="txtName" Width="140"  Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
