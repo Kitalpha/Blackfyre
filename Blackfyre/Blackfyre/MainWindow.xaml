@@ -9,7 +9,7 @@
     <Grid>
         <Rectangle x:Name="TopBar" Fill="#FF444BE4" HorizontalAlignment="Left" Height="39" Stroke="Black" VerticalAlignment="Top" Width="1138" StrokeThickness="0"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" Text="Blackfyre" VerticalAlignment="Top" Width="187" FontSize="24" FontWeight="Bold" Foreground="White" FontFamily="Calibri" Margin="4,5,0,0"/>
-        <ListView Margin="28,106,865,83" Name="lvPlayers">
+        <ListView Margin="28,106,865,56" Name="lvPlayers" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Number" Width="70" DisplayMemberBinding="{Binding Number}" />
@@ -24,29 +24,63 @@
             </ListView.View>
         </ListView>
 
-        <ListView Margin="297,106,363,83" Name="lvRoles">
+        <ListView Margin="297,106,236,56" Name="lvRoles" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Role" Width="150" DisplayMemberBinding="{Binding Role}" />
-                    <GridViewColumn Header="Number" Width="70">
+                    <GridViewColumn Header="Role" Width="150" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Number" Width="75">
                         <GridViewColumn.CellTemplate >
                             <DataTemplate>
-                                <TextBox x:Name="txtRoleNumber" Width="60" Text="{Binding Path=RoleNumber, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBox x:Name="txtRoleNumber" Width="60" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding RoleName}" />
-                    <GridViewColumn Header="Role" Width="100">
+                    <GridViewColumn Header="Name" Width="150">
                         <GridViewColumn.CellTemplate >
                             <DataTemplate>
-                                <ComboBox x:Name="txtRoleOption" Width="90" Text="{Binding Path=RoleOption, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBlock x:Name="txtRoleName" Width="60" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Role" Width="110">
+                        <GridViewColumn.CellTemplate >
+                            <DataTemplate>
+                                <ComboBox Name="RoleType" Width="90" ItemsSource="{Binding RoleType}"  SelectedItem="{Binding RoleTypeSelected}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Dead" Width="60">
+                        <GridViewColumn.CellTemplate >
+                            <DataTemplate>
+                                <Button Name="Dead" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                    <Button.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFD81C1C" Offset="0.017"/>
+                                            <GradientStop Color="#FFDE4747" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Button.Background>
+                                </Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Conf" Width="60">
+                        <GridViewColumn.CellTemplate >
+                            <DataTemplate>
+                                <Button Name="Confirmed" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                    <Button.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF264FDA" Offset="0"/>
+                                            <GradientStop Color="#FF727AD3" Offset="0.996"/>
+                                        </LinearGradientBrush>
+                                    </Button.Background>
+                                </Button>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        
-        <TextBox x:Name="notePad" HorizontalAlignment="Left" Height="417" Margin="797,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
+
+        <RichTextBox x:Name="notePad" HorizontalAlignment="Left" Height="444" Margin="916,106,0,0" VerticalAlignment="Top" Width="202"/>
     </Grid>
 </Window>

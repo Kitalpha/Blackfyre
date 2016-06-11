@@ -33,6 +33,7 @@ namespace Blackfyre
 
             InitializeComponent();
             lvPlayers.ItemsSource = AddPlayers();
+            lvRoles.ItemsSource = AddRoles();
         }
 
         private void SetupLog4Net()
@@ -44,13 +45,36 @@ namespace Blackfyre
         {
             List<Player> playersList = new List<Player>();
 
-            for (int i = 0; i <= _totalPlayers; i++)
+            for (int i = 1; i <= _totalPlayers; i++)
             {
                 playersList.Add(new Player() { Number = i });
             }
 
             _logger.Info("Created 15 player list.");
             return playersList;
+        }
+
+        private List<Role> AddRoles()
+        {
+            List<Role> rolesList = new List<Role>();
+
+            rolesList.Add(new Role("Jailor", new List<string> { "Jailor" }));
+            rolesList.Add(new Role("Town Investigative", new List<string> { "Sheriff", "Investigator", "Lookout", "Spy" }));
+            rolesList.Add(new Role("Town Investigative", new List<string> { "Sheriff", "Investigator", "Lookout", "Spy" }));
+            rolesList.Add(new Role("Town Support", new List<string> { "Mayor", "Escort", "Medium", "Retributionist", "Transporter" }));
+            rolesList.Add(new Role("Town Support", new List<string> { "Mayor", "Escort", "Medium", "Retributionist", "Transporter" }));
+            rolesList.Add(new Role("Town Protective", new List<string> { "Bodyguard", "Doctor" }));
+            rolesList.Add(new Role("Town Killing", new List<string> { "Veteren", "Vigilante", "Vampire Hunter" }));
+            rolesList.Add(new Role("Town Random", new List<string> { "Sheriff", "Investigator", "Lookout", "Spy", "Mayor", "Escort", "Medium", "Retributionist", "Transporter", "Bodyguard", "Doctor", "Veteren", "Vigilante", "Vampire Hunter" }));
+            rolesList.Add(new Role("Godfather", new List<string> { "Godfather" }));
+            rolesList.Add(new Role("Mafioso", new List<string> { "Mafioso" }));
+            rolesList.Add(new Role("Mafia Random", new List<string> { "Blackmailer", "Consigliere", "Consort", "Disguiser", "Janitor", "Framer", "Forger" }));
+            rolesList.Add(new Role("Neutral Killing", new List<string> { "Arsonist", "Werewolf", "Seriel Killer" }));
+            rolesList.Add(new Role("Neutral Evil", new List<string> { "Witch", "Jester", "Executioner" }));
+            rolesList.Add(new Role("Neutral Benign", new List<string> { "Survivor", "Amnesiac" }));
+            rolesList.Add(new Role("Any", new List<string> { "Sheriff", "Investigator", "Lookout", "Spy", "Mayor", "Escort", "Medium", "Retributionist", "Transporter", "Bodyguard", "Doctor", "Veteren", "Vigilante", "Vampire Hunter", "Blackmailer", "Consigliere", "Consort", "Disguiser", "Janitor", "Framer", "Forger", "Arsonist", "Werewolf", "Seriel Killer", "Witch", "Jester", "Executioner", "Survivor", "Amnesiac" }));
+
+            return rolesList;
         }
     }
 }
