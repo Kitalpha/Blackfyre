@@ -23,5 +23,30 @@
                 </GridView>
             </ListView.View>
         </ListView>
+
+        <ListView Margin="297,106,363,83" Name="lvRoles">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Role" Width="150" DisplayMemberBinding="{Binding Role}" />
+                    <GridViewColumn Header="Number" Width="70">
+                        <GridViewColumn.CellTemplate >
+                            <DataTemplate>
+                                <TextBox x:Name="txtRoleNumber" Width="60" Text="{Binding Path=RoleNumber, UpdateSourceTrigger=PropertyChanged}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding RoleName}" />
+                    <GridViewColumn Header="Role" Width="100">
+                        <GridViewColumn.CellTemplate >
+                            <DataTemplate>
+                                <ComboBox x:Name="txtRoleOption" Width="90" Text="{Binding Path=RoleOption, UpdateSourceTrigger=PropertyChanged}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        <TextBox x:Name="notePad" HorizontalAlignment="Left" Height="417" Margin="797,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321"/>
     </Grid>
 </Window>
